@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@model ICollection<MVC_CRUD.Models.Shipper>
+
+<DİV class="row" style="margin-top:50px;">
+    <a href="/Shipper/Create" class="btn btn-success btn-block" >Kargo Ekle</a>
+    <br />
+    <div class="panel-de
+         fault">
+        <div class="panel-body">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>    @*th kalın yazdırır*@
+                        <th>Şirket Adı</th>
+                        <th>Telefon</th>
+                        <th>İşlemler</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                  @foreach (var item in Model)
+                  {
+                      <tr>
+                          <td>@item.ShipperID</td>
+                          <td>@item.CompanyName</td>
+                          <td>@item.Phone</td>
+                          <td>
+                              @*TODO: İşlemler*@
+                          </td>
+                      </tr>
+                  }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</DİV>
